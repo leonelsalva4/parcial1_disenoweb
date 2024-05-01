@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+header {
+    background-color: #622582; 
+    color: #fff; 
+    text-align: center; 
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2em; 
+}
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 120px); /* Calculamos el alto para que main ocupe el espacio restante, menos la altura del header y footer */
+    display: flex; /* Usamos flexbox para alinear el contenido verticalmente */
+    justify-content: space-between; /* Centramos el contenido horizontalmente */
+    align-items: center; /* Centramos el contenido verticalmente */
+}
+
+.personal-info {
+    display: grid;
+    grid-template-columns: 35% 65%; /* Dividimos el main en dos columnas, la primera ocupa el 35% y la segunda el 65% */
+    align-items: center; /* Centramos los elementos verticalmente */
+    padding: 20px;
+}
+
+.photo {
+    max-width: 80%; /* La foto ocupa todo el ancho de su contenedor */
+    height: auto; /* Mantenemos la proporción de la imagen */
+    border-radius: 15px; /* Borde redondeado */
+    margin-right: 40px;
+    margin-left: 30px;
+}
+
+.text-info {
+    font-size: 20px; /* Tamaño de fuente en píxeles */
+    padding: 20px; /* Añadimos padding al texto según sea necesario */
+    word-spacing: 5px;
+}
+
+.text-info li {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #622582; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px 0; 
+}
+
+.logo {
+    width: 80px; /* Tamaño del logo */
+    height: auto; 
+}
+
+.text-info h2 span {
+    font-weight: bold; /* Hace que el texto dentro del span sea negrita */
+}
+
+.text-info h2 span:not(.bold) {
+    font-weight: normal; /* Quita la negrita para el texto dentro del span sin la clase 'bold' */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Cambiamos la dirección de la fila a columna */
+        align-items: center; /* Alineamos los elementos al centro horizontalmente */
+        text-align: center; /* Centramos el texto horizontalmente */
+    }
+
+    .personal-info {
+        grid-template-columns: 100%; /* La foto y el texto ocupan todo el ancho */
+        padding: 20px 10px; /* Reducimos el padding */
+    }
+
+    .photo {
+        margin: 0 auto; /* Centramos la foto horizontalmente */
+        margin-bottom: 20px; /* Añadimos un margen inferior para separar la foto del texto */
+    }
+
+    .text-info {
+        font-size: 16px; /* Reducimos el tamaño de la fuente */
+        max-width: 90%; /* Ajustamos el ancho del contenedor de texto */
+        margin: 0 auto; /* Centramos el contenedor de texto horizontalmente */
+        text-align: left; /* Alineamos el texto a la izquierda */
+    }
+}
+
