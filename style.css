@@ -16,30 +16,30 @@ header h1 {
 
 main {
     width: 100%;
-    min-height: calc(100vh - 120px); /* Calculamos el alto para que main ocupe el espacio restante, menos la altura del header y footer */
-    display: flex; /* Usamos flexbox para alinear el contenido verticalmente */
-    justify-content: space-between; /* Centramos el contenido horizontalmente */
-    align-items: center; /* Centramos el contenido verticalmente */
+    min-height: calc(100vh - 120px); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .personal-info {
     display: grid;
-    grid-template-columns: 35% 65%; /* Dividimos el main en dos columnas, la primera ocupa el 35% y la segunda el 65% */
-    align-items: center; /* Centramos los elementos verticalmente */
+    grid-template-columns: 35% 65%; 
+    align-items: center; 
     padding: 20px;
 }
 
 .photo {
-    max-width: 80%; /* La foto ocupa todo el ancho de su contenedor */
-    height: auto; /* Mantenemos la proporción de la imagen */
-    border-radius: 15px; /* Borde redondeado */
+    max-width: 80%; 
+    height: auto;
+    border-radius: 15px; 
     margin-right: 40px;
     margin-left: 30px;
 }
 
 .text-info {
-    font-size: 20px; /* Tamaño de fuente en píxeles */
-    padding: 20px; /* Añadimos padding al texto según sea necesario */
+    font-size: 20px; 
+    padding: 20px; 
     word-spacing: 5px;
 }
 
@@ -55,41 +55,41 @@ footer {
 }
 
 .logo {
-    width: 80px; /* Tamaño del logo */
+    width: 80px; 
     height: auto; 
 }
 
 .text-info h2 span {
-    font-weight: bold; /* Hace que el texto dentro del span sea negrita */
+    font-weight: bold; 
 }
 
 .text-info h2 span:not(.bold) {
-    font-weight: normal; /* Quita la negrita para el texto dentro del span sin la clase 'bold' */
+    font-weight: normal; 
 }
 
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Cambiamos la dirección de la fila a columna */
-        align-items: center; /* Alineamos los elementos al centro horizontalmente */
-        text-align: center; /* Centramos el texto horizontalmente */
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
     }
 
     .personal-info {
-        grid-template-columns: 100%; /* La foto y el texto ocupan todo el ancho */
-        padding: 20px 10px; /* Reducimos el padding */
+        grid-template-columns: 100%; 
+        padding: 20px 10px; 
     }
 
     .photo {
-        margin: 0 auto; /* Centramos la foto horizontalmente */
-        margin-bottom: 20px; /* Añadimos un margen inferior para separar la foto del texto */
+        margin: 0 auto; 
+        margin-bottom: 20px; 
     }
 
     .text-info {
-        font-size: 16px; /* Reducimos el tamaño de la fuente */
-        max-width: 90%; /* Ajustamos el ancho del contenedor de texto */
-        margin: 0 auto; /* Centramos el contenedor de texto horizontalmente */
-        text-align: left; /* Alineamos el texto a la izquierda */
+        font-size: 16px; 
+        max-width: 90%; 
+        margin: 0 auto; 
+        text-align: left; 
     }
 }
 
